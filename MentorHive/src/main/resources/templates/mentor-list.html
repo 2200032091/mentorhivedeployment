@@ -1,0 +1,73 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>
+   Find a mentor – MentorCruise
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-blue-50">
+  <!-- Navbar -->
+  <nav class="bg-blue-200 shadow-md p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="text-2xl font-bold text-blue-500">
+     MentorHive
+    </div>
+    <div class="flex items-center">
+     <span class="mr-4 text-blue-700 font-semibold">
+      Welcome, Harika
+     </span>
+     <img alt="Profile icon" class="w-8 h-8 rounded-full mr-4" height="32" src="pic.jpeg" width="32"/>
+     <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">
+      <a href="index.html">Log Out</a>
+     </button>
+    </div>
+   </div>
+  </nav>
+  <div class="container mx-auto p-4">
+   <div class="flex">
+    <!-- Main Content -->
+    <h1>Available Mentors</h1>
+    <div class="w-3/4 p-4">
+     <div th:each="mentor : ${mentors}" class="bg-white p-6 rounded-lg shadow-md mb-6">
+      <div class="flex">
+       <img alt="Profile picture of Tiago Gouveia" class="w-24 h-24 rounded-full mr-4" height="100" src="pic1.jpeg" width="100"/>
+       <div class="flex-1">
+        <h2 th:text="${mentor.name}" class="text-2xl font-semibold">
+         <span class="text-gray-500">
+          ™
+         </span>
+        </h2>
+        <p th:text="${mentor.specialisation}" class="text-gray-700">
+        </p>
+        <p th:text="${mentor.age}" class="text-green-500">
+         
+        </p>
+        <p th:text="${mentor.bio}" class="text-gray-700 mt-2">
+        
+        </p>
+        <p>
+        <span th:text="${mentor.skills}">Skills</span></p>
+        
+       </div>
+       <div class="text-right">
+        <div class="text-gray-500 mb-2">
+         <span th:text="${mentor.availability}">Availability</span> left
+        </div>
+        
+       <a th:href="@{/mentor/details(id=${mentor.id})}" class="mr-4 text-blue-700 font-semibold">Show Full Details</a>
+            
+        
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

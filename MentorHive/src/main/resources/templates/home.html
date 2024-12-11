@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>MentorHive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-blue-50 font-roboto">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-50 shadow-md p-4">
+    <nav class="flex justify-between items-center p-6">
+        <div class="text-blue-600 text-2xl font-bold">MentorHive</div>
+        <div class="flex space-x-8">
+            <a href="#about" class="text-black text-lg"><b>About</b></a>
+            <a href="#contact" class="text-black text-lg"><b>Contact Us</b></a>
+            <a href="/mentor/login"><button class="bg-blue-500 text-white px-4 py-2 rounded"> Mentor</button></a>
+             <a href="/mentee/login"><button class="bg-blue-500 text-white px-4 py-2 rounded"> Mentee</button></a>
+              <a href="/admin/login"><button class="bg-blue-500 text-white px-4 py-2 rounded">Admin</button></a>
+        </div>
+    </nav>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="flex flex-col items-center justify-center h-screen">
+        <h1 class="text-5xl text-center text-blue-600 mb-8 font-merriweather">"Mentors that inspire, mentees that thrive."</h1>
+        <a href="login.html"><button class="bg-blue-500 text-white px-6 py-3 rounded transition duration-300 ease-in-out transform hover:scale-105">Browse mentors</button></a>
+    </div>
+
+    <!-- About Section -->
+    <nav class="bg-blue shadow-md p-4">
+    <section id="about" class="bg-blue-50 shadow-md p-4">
+        <div class="flex items-center justify-center">
+            <div class="flex flex-row items-center justify-center space-x-8">
+             <div class="flex flex-col items-start justify-center">
+              <blockquote class="text-left text-lg font-serif italic text-black max-w-lg">
+               "We are a passionate team dedicated to empowering personal and professional growth through meaningful mentorship. Our platform connects mentors and mentees, creating a space for learning, guidance, and collaboration. With a focus on tracking progress and fostering relationships, we aim to make mentorship accessible and impactful. Together, we believe in unlocking potential and shaping the leaders of tomorrow."
+              </blockquote>
+              <div class="mt-4 text-right text-sm text-gray-600 font-bold italic">
+                Section-32    Team-18    Project-46
+               </div>
+             </div>
+             <div class="flex items-center justify-center">
+              <img alt="A group of people putting their hands together in a show of unity and teamwork" class="rounded-3xl w-96 h-64 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/e8I97hx8Xj1AGS0ZNgkRMeHfjf9M2nvsS0fUq1vSofIwtPv4E.jpg" width="500"/>
+             </div>
+            </div>
+           </div>
+    </section>
+    </nav>
+    <!-- Contact Us Section -->
+    <nav class="bg-blue shadow-md p-4">
+    <section id="contact" class="bg-blue-50 shadow-md p-4">
+        <div class="container mx-auto text-center">
+            
+            <p class="text-lg text-gray-600 mb-6">
+                Have any questions or inquiries? Reach out to us!
+            </p>
+            <p class="text-lg">
+                <i class="fas fa-envelope"></i> 2200030081@kluniversity.in<br>
+                <i class="fas fa-envelope"></i> 2200031297@kluniversity.in<br>
+                <i class="fas fa-envelope"></i> 2200032091@kluniversity.in<br>
+                <i class="fas fa-phone"></i> Phone: +1-234-567-890
+            </p>
+        </div>
+    </section>
+    </nav>
+</body>
+</html>
+

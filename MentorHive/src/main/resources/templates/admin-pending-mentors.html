@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pending Mentors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-200 p-4 text-blue-900">
+        <h1 class="text-2xl font-bold">Pending Mentors</h1>
+        <a href="/admin/dashboard" class="float-right underline">Back to Dashboard</a>
+    </nav>
+
+    <div class="container mx-auto mt-8">
+        <div class="grid grid-cols-3 gap-4">
+            <!-- Loop through each pending mentor -->
+            <div th:each="mentor : ${pendingMentorsList}" 
+                 class="bg-white p-6 shadow rounded-lg cursor-pointer hover:bg-blue-200 transition">
+                <a th:href="@{/admin/mentor-details/{id}(id=${mentor.id})}">
+                    <h3 class="text-xl font-bold mt-4" th:text="${mentor.name}"></h3>
+                    <p class="text-gray-700" th:text="${mentor.specialisation}"></p>
+                    <p class="text-gray-600" th:text="${mentor.location}"></p>
+                    <p class="text-gray-500" th:text="${mentor.bio}"></p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
